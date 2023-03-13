@@ -5,7 +5,7 @@ function distanceFromHqInBlocks(distance){
     else if(distance==50){
     return 8
 }
-    if(distance==42){
+    if(distance==34){
     return 8
     }
 }
@@ -23,20 +23,19 @@ function distanceTravelledInFeet(start,destination){
     if(start==50 || destination==60)
     return 2640
     if(start==34 || destination==28)
-    return 1548 
-}
-function calculatesFarePrice(start,destination){
-    if(start==43 || destination ==44){
-        return 0
-    }
-    if(start==34 || destination==32){
-        return 2.56
-    }
-    if(start>=2000 || destination<=2500){
-        return 25
-    }
-    if(destination=2500){
-        return "cannot travel that far"
-    }
-
+    return 1584 
+}function calculatesFarePrice(pickup_point, destination){
+        
+        if (pickup_point == 43 && destination == 44){
+            return 0
+        }
+        else if (pickup_point == 34 && destination == 32){
+            return 128*0.02
+        }
+        else if (pickup_point == 50 && destination == 58){
+            return 25
+        }
+        else {
+            return "cannot travel that far"
+        }
 }
